@@ -9,12 +9,18 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/splashim"
-        android:label="@string/app_name"
         android:roundIcon="@drawable/splashim"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse"
         tools:targetApi="31">
+        <activity
+            android:name=".Device"
+            android:exported="false"
+            android:label="@string/title_activity_device" />
+        <activity
+            android:name=".AddRoom"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

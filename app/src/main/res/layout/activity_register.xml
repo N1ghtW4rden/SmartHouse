@@ -29,12 +29,12 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageKitchen"
+        app:layout_constraintStart_toStartOf="@+id/imageKitchen"
+        app:layout_constraintTop_toBottomOf="@+id/imageKitchen" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageKitchen"
         android:layout_width="131dp"
         android:layout_height="112dp"
         android:layout_marginTop="132dp"
@@ -46,7 +46,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="328dp"
-        android:layout_height="204dp"
+        android:layout_height="220dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/linearlayoutst"
         android:orientation="vertical"
@@ -58,9 +58,10 @@
             android:id="@+id/mainEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="@android:color/white"
-            android:ems="10"
 
+            android:ems="10"
             android:hint="E-mail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"

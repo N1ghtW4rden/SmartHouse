@@ -29,12 +29,12 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageKitchen"
+        app:layout_constraintStart_toStartOf="@+id/imageKitchen"
+        app:layout_constraintTop_toBottomOf="@+id/imageKitchen" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageKitchen"
         android:layout_width="131dp"
         android:layout_height="112dp"
         android:layout_marginTop="132dp"
@@ -45,8 +45,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="330dp"
-        android:layout_height="161dp"
+        android:layout_width="331dp"
+        android:layout_height="195dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/linearlayoutst"
         android:orientation="vertical"
@@ -58,6 +58,7 @@
             android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/white"
             android:ems="10"
             android:hint="E-mail"
@@ -85,8 +86,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:background="@drawable/btn1"
-        android:text="Enter Your House"
 
+        android:text="Enter Your House"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

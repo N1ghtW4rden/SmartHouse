@@ -1,7 +1,5 @@
 package com.example.smarthouse;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,10 +28,12 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.loginEmail);
         loginPassword = findViewById(R.id.loginPassword);
 
+
         newButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+
             }
         });
 
@@ -39,8 +41,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(TextUtils.isEmpty(loginEmail.getText().toString())) {
+
                     String message = "Заполните Email!";
                     Toast.makeText(LoginActivity.this, message,Toast.LENGTH_LONG).show();
+
                 }
                 else if(loginEmail.equals(invalidEmailIds)){
                     String message = "Некорректный Емейл!";
@@ -54,15 +58,22 @@ public class LoginActivity extends AppCompatActivity {
                     String message = "Пароль должен состоять из 8 или более символов!";
                     Toast.makeText(LoginActivity.this, message, Toast.LENGTH_LONG).show();
                 }
+
                 else{
                     LoginReq loginRequest = new LoginReq();
                     loginRequest.setUsername(loginEmail.getText().toString());
                     loginRequest.setPassword(loginPassword.getText().toString());
+
+
                     loginUser(loginRequest);
                 }
+
             }
         });
+
     }
+
+
 
     // list of valid email addresses
     private static final String[] validEmailIds = new String[] { "journaldev@yahoo.com", "journaldev-100@yahoo.com",
@@ -91,6 +102,10 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
     public void loginUser(LoginReq loginRequest){
         Call<LoginResp> loginResponseCall = ApiClient.getService().loginUser(loginRequest);
         loginResponseCall.enqueue(new Callback<LoginResp>() {
@@ -98,14 +113,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResp> call, Response<LoginResp> response) {
 
                 if(response.isSuccessful()){
+
                     LoginResp loginResponse = response.body();
                     startActivity(new Intent(LoginActivity.this, MainActivity.class).putExtra("data", loginResponse));
+
                     finish();
-                }
-                else{
+                }else{
                     String message = "An error occured please try again";
                     Toast.makeText(LoginActivity.this, message,Toast.LENGTH_LONG).show();
                 }
+
             }
 
             @Override
