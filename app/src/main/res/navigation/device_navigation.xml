@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/device_navigation"
+    app:startDestination="@id/thermoFragment">
+
+    <fragment
+        android:id="@+id/thermoFragment"
+        android:name="com.example.smarthouse.ThermoFrag"
+        android:label="fragment_thermo"
+        tools:layout="@layout/fragment_thermo" />
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="com.example.smarthouse.LightFrag"
+        android:label="fragment_light"
+        tools:layout="@layout/fragment_light" />
+</navigation>

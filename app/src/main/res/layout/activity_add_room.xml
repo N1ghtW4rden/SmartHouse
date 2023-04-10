@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRoom">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:background="#2A2A37"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_weight="1"
+            android:paddingRight="70dp"
+            app:srcCompat="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Add Room"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            android:text="Save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="411dp"
+        android:layout_height="83dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Enter Room's Name" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edtext"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Kitchen" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Select room's"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="557dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <LinearLayout
+            android:id="@+id/LinearLay1"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/kitchenBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round"
+                    app:srcCompat="@drawable/kitchen_adrm" />
+
+                <TextView
+                    android:id="@+id/kitchenText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Kitchen"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/bedroomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/bedroom_adrm" />
+
+                <TextView
+                    android:id="@+id/bedroomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Bedroom"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/bathroomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/bathroom_adrm" />
+
+                <TextView
+                    android:id="@+id/bathroomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Bathroom"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/officeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+                    app:srcCompat="@drawable/office_adrm" />
+
+                <TextView
+                    android:id="@+id/officeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Office"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/tvroomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/tvroom_adrm" />
+
+                <TextView
+                    android:id="@+id/tvroomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="TV Room"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/livingroomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/livingroom_adrm" />
+
+                <TextView
+                    android:id="@+id/livingroomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Living Room"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/garageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+                    app:srcCompat="@drawable/garage_adrm" />
+
+                <TextView
+                    android:id="@+id/garageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Garage"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/toiletBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/toilet_adrm" />
+
+                <TextView
+                    android:id="@+id/toiletText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Toilet"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/kidroomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/round_white"
+
+                    app:srcCompat="@drawable/kidroom_adrm" />
+
+                <TextView
+                    android:id="@+id/kidroomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Kid Room"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
